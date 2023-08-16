@@ -4,6 +4,7 @@ import { saveUserToDb, updateUserInDB } from "../Actions/UserAction";
 import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import axios from "axios";
+import "./styles.scss";
 
 function EditUser() {
   const { id } = useParams();
@@ -34,7 +35,7 @@ function EditUser() {
   };
 
   return (
-    <div>
+    <div className={"style_wrapper"}>
       <h3 style={{ margin: "10px 0 10px 0" }}>Edit User Form</h3>
       <form onSubmit={handleSubmit}>
         <Form.Label htmlFor="inputPassword5">User Name</Form.Label>

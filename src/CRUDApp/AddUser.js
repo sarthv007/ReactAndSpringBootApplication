@@ -3,6 +3,7 @@ import { Button, Form } from "react-bootstrap";
 import { saveUserToDb } from "../Actions/UserAction";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import "./styles.scss";
 
 function AddUser() {
   const navigate = useNavigate();
@@ -22,7 +23,7 @@ function AddUser() {
   };
 
   return (
-    <div>
+    <div className={"style_wrapper"}>
       <h3 style={{ margin: "10px 0 10px 0" }}>Add User Form</h3>
       <form onSubmit={handleSubmit}>
         <Form.Label htmlFor="inputPassword5">User Name</Form.Label>
